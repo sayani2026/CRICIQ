@@ -221,12 +221,12 @@ st.divider()
 st.markdown(
     '<div style="text-align:center;padding:1.1rem 0 .4rem">'
     '<div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#9fb0d6">Designed &amp; built by</div>'
-    '<div style="font-size:1.55rem;font-weight:800;color:#F5B83D;line-height:1.3">Arghadeep Dutta</div>'
+    '<div style="font-size:1.55rem;font-weight:800;color:#F5B83D;line-height:1.3">Sayani Dutta</div>'
     '<div style="font-size:.85rem;color:#8ea2cc;margin-top:.15rem">'
     "CRICQ — an independent cricket-analytics project for Rajasthan Royals' SupeRR Selector Season 2</div>"
-    '<a href="https://github.com/arghadeep2508" target="_blank" '
+    '<a href="https://github.com/sayani2026" target="_blank" '
     'style="display:inline-block;margin-top:.45rem;font-size:.85rem;color:#4F8FE6;text-decoration:none">'
-    "↗ github.com/arghadeep2508</a>"
+    "↗ github.com/sayani2026</a>"
     "</div>",
     unsafe_allow_html=True,
 )
