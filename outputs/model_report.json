@@ -1,0 +1,128 @@
+{
+ "reconciliation": {
+  "matches_checked": 810,
+  "matching": 809,
+  "match_rate_pct": 99.88,
+  "mismatches": [
+   14130
+  ]
+ },
+ "expected_calibration": {
+  "bat_runs_actual": 1.3946,
+  "bat_runs_expected": 1.3937,
+  "out_actual": 0.0546,
+  "out_expected": 0.0551,
+  "bowl_runs_actual": 1.3909,
+  "bowl_runs_expected": 1.3903,
+  "bowl_wkt_actual": 0.0511,
+  "bowl_wkt_expected": 0.0513
+ },
+ "n_sensitivity_variants": 10,
+ "auction": {
+  "purse_cr": 29.8,
+  "freed_cr": 20.45,
+  "squad_kept": 21,
+  "slots": 4,
+  "overseas_kept": 6,
+  "overseas_slots": 2,
+  "released": [
+   "Adam Milne",
+   "Dasun Shanaka",
+   "Emanjot Chahal",
+   "Kuldeep Sen",
+   "Sandeep Sharma",
+   "Shimron Hetmyer"
+  ],
+  "as_of": "2026-11-15"
+ },
+ "data": {
+  "matches_with_balls": 867,
+  "balls": 200961,
+  "ipl_matches": 367,
+  "t20i_matches": 470,
+  "other_matches": 30,
+  "first_date": "2022-01-22",
+  "last_date": "2026-11-01",
+  "venues": 97
+ },
+ "win_probability": [
+  {
+   "innings": 1,
+   "train_balls": 62211,
+   "test_balls": 41672,
+   "auc": 0.6849,
+   "brier": 0.2321,
+   "brier_baseline": 0.2518
+  },
+  {
+   "innings": 2,
+   "train_balls": 57443,
+   "test_balls": 37703,
+   "auc": 0.9077,
+   "brier": 0.1265,
+   "brier_baseline": 0.2522
+  }
+ ],
+ "pressure": {
+  "high_pressure_threshold_pct": 75,
+  "weight_stakes": 0.5,
+  "weight_squeeze": 0.5,
+  "share_high_pressure_pct": 25.1,
+  "wp_movement": [
+   {
+    "innings": 1,
+    "share_of_balls_pct": 25.7,
+    "share_of_wp_movement_pct": 37.9
+   },
+   {
+    "innings": 2,
+    "share_of_balls_pct": 24.4,
+    "share_of_wp_movement_pct": 58.5
+   }
+  ]
+ },
+ "scoring": {
+  "bat": {
+   "k_overall": 683.0806749497589,
+   "k_anchor": 1600,
+   "league_share_positive": 0.5770609318996416,
+   "eligible": 94
+  },
+  "bowl": {
+   "k_overall": 1010.776032724849,
+   "k_anchor": 3200,
+   "league_share_positive": 0.5113937466878643,
+   "eligible": 100
+  },
+  "opponent_adjust": {
+   "k_bowl_all": 1011.2223967772704,
+   "k_bat_all": 683.0806749497589
+  },
+  "weights": {
+   "w_quality": 0.6,
+   "w_lift": 0.15,
+   "w_consistency": 0.25,
+   "prior_k_grid": [
+    50,
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200
+   ],
+   "bootstrap_reps": 300
+  },
+  "wicket_value_cap": 8,
+  "eligibility": {
+   "bat_min_pressure_balls": 150,
+   "bat_min_pressure_matches": 12,
+   "bowl_min_pressure_balls": 150,
+   "bowl_min_pressure_matches": 12,
+   "match_min_pressure_balls": 6,
+   "active_since": 2025
+  },
+  "recency_decay": 0.85,
+  "associate_weight": 0.5
+ }
+}

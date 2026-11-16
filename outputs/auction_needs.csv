@@ -1,0 +1,7 @@
+need,label,want,strength,gap,level,proven,squad_players
+allrounder_pace,Pace-bowling all-rounder,1,44.3,10.7,High,0,Sam Curran (44)
+spin,Middle-overs spinner,2,45.4,9.6,High,0,"Ravi Bishnoi (46), Riyan Parag (unranked), Yash Punja (unranked), Vignesh Puthur (unranked), Ravindra Jadeja (42)"
+pace_death,Death-overs pace bowler,2,46.8,8.2,High,0,"Jofra Archer (52), Tushar Deshpande (42), Sam Curran (42)"
+pace_powerplay,Powerplay pace bowler,2,48.4,6.6,Medium,0,"Jofra Archer (52), Yudhvir Singh (unranked), Brijesh Sharma (unranked), Sushant Mishra (unranked), Kwena Maphaka (unranked), Nandre Burger (unranked), Tushar Deshpande (42)"
+finisher,Finisher (overs 15-20),2,51.2,3.8,Medium,0,"Dhruv Jurel (53), Ravindra Jadeja (49), Shubham Dubey (unranked), Ravi Singh (unranked), Donovan Ferreira (unranked)"
+top_order,Opener / top order,3,54.2,0.8,Low,2,"Yashasvi Jaiswal (63), Riyan Parag (55), Vaibhav Sooryavanshi (unranked), Aman Rao (unranked), Lhuan Pretorius (unranked)"

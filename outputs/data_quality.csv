@@ -1,0 +1,13 @@
+check,finding,decision
+Matches without a winner,41 (no result / abandoned / tied without super over),Kept for player stats where balls exist; excluded from win-probability training.
+Matches with no ball-by-ball data,16,Abandoned before a ball; ignored.
+Rain-reduced innings,50 innings; revised overs stored as BALLS (e.g. 114 = 19 overs),Used as the innings length; revised_target used as the chase target.
+Format coding,IPL and two A-team events (Asia Cup Rising Stars 2025; Mens T20 Emerging Teams Asia Cup 2024) share the code 'T20',Only competitions named IPL are treated as IPL; the A-team events are labelled 'Other T20'.
+Second-tier teams (associates and A-teams),"Afghanistan A, Bangladesh A, Canada, Hong Kong, India A, Japan, Kuwait, Nepal, Netherlands, Oman, Pakistan A, Scotland, Singapore, Sri Lanka A, United Arab Emirates, United States Of America",Balls against these teams weighted x0.5 in player ratings.
+Super-over balls,38,Excluded: too few to rate and not comparable to a 20-over innings.
+Duplicate deliveries,0,None found.
+Extras coding,wide / Overstep / other / byes / legbyes / Penalty,"'Overstep' and 'other' are no-balls (batter faced, not a legal ball). Byes and leg-byes are not charged to the bowler."
+"Same name, different players","Abdul Samad, Basil Hameed, Haider Ali",Players identified by ID; display name gets their team in brackets.
+Scoreboard rebuild vs official results,809 of 810 matches agree (99.9%),Mismatch(es) are 1-run differences in the source result text; kept.
+Names in RR squad file,"2 name(s) not found in the Data Pack: Aman Rao, Emanjot Chahal",Ignored (usually domestic players with no matches 2022–26)
+Names in news reports file,"10 name(s) not found in the Data Pack: Atharva Ankolekar, Harnoor Singh, Kanishk Chouhan, Mangesh Yadav, Mohammad Izhar, Pyla Avinash, Satvik Deswal, Vicky Ostwal, Vihaan Malhotra, Vishal Nishad",Ignored (usually domestic players with no matches 2022–26)

@@ -1,0 +1,5 @@
+slot,need,need_label,need_level,target,overseas,clutch_score,availability,avail_prob,priority,plan_b
+1,pace_death,Death-overs pace bowler,High,Lockie Ferguson,True,64.8,Tipped for release,0.731,85.7,"Matheesha Pathirana (60), Gerald Coetzee (60)"
+2,pace_death,Death-overs pace bowler,High,Matheesha Pathirana,True,60.1,Tipped for release,0.881,83.3,"Mohsin Khan (58), Harshal Patel (53)"
+3,spin,Middle-overs spinner,High,Rahul Chahar,False,53.3,Tipped for release,0.731,74.3,Harpreet Brar (58)
+4,pace_powerplay,Powerplay pace bowler,Medium,Ishant Sharma,False,55.9,Tipped for release,0.711,71.6,"Mohsin Khan (58), Yash Dayal (51)"

@@ -1,0 +1,21 @@
+variant,role,top10_kept,spearman
+High-pressure cut-off: top 30% of balls,bat,8,0.922017122421703
+High-pressure cut-off: top 30% of balls,bowl,9,0.9279087908790877
+High-pressure cut-off: top 20% of balls,bat,7,0.8895082765335931
+High-pressure cut-off: top 20% of balls,bowl,8,0.92738558909445
+Pressure blend: 65% stakes / 35% squeeze,bat,8,0.8494722505958462
+Pressure blend: 65% stakes / 35% squeeze,bowl,9,0.9105959394066905
+Pressure blend: 35% stakes / 65% squeeze,bat,6,0.8879532452566161
+Pressure blend: 35% stakes / 65% squeeze,bowl,6,0.7718529571351057
+Score blend: quality only,bat,6,0.8037784922154392
+Score blend: quality only,bowl,8,0.8127212721272127
+Score blend: 40/30/30,bat,10,0.9682548856699057
+Score blend: 40/30/30,bowl,10,0.974053405340534
+No recency weighting,bat,7,0.9814615467976736
+No recency weighting,bowl,9,0.989078907890789
+Associate opposition counts fully,bat,9,0.9942780767980349
+Associate opposition counts fully,bowl,9,0.9968316831683168
+Associate opposition counts 25%,bat,10,0.9996243181736085
+Associate opposition counts 25%,bowl,10,0.9988478847884787
+"Stricter eligibility (200 balls, 15 matches)",bat,8,0.9996586059743955
+"Stricter eligibility (200 balls, 15 matches)",bowl,10,0.9993677208867082
