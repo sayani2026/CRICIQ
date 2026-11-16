@@ -1,0 +1,99 @@
+# CRICQ configuration — every tunable number lives here.
+
+paths:
+  # Folder holding the 6 Data Pack CSVs. Relative paths are resolved from this file's folder.
+  # The first folder that exists is used.
+  raw_dirs:
+    - data/raw
+    - "../CRICQ DATASET/Data Pack"
+  processed_dir: data/processed
+  outputs_dir: outputs
+  figures_dir: report/figures
+
+seed: 42
+
+pressure:
+  # Pressure Index = weighted blend of two parts, each turned into a 0-100 percentile.
+  weight_stakes: 0.5        # how much this ball can swing the result (win-probability leverage)
+  weight_squeeze: 0.5       # how tough the scoreboard is (required pace vs par, collapse)
+  high_pressure_pct: 75     # balls at or above this Pressure Index percentile count as "high pressure"
+
+weights:
+  recency_decay: 0.85       # each season older than the latest counts 0.85x the next
+  associate_opposition: 0.5 # balls against associate-nation opposition count half
+
+eligibility:
+  bat_min_pressure_balls: 150
+  bat_min_pressure_matches: 12
+  bowl_min_pressure_balls: 150
+  bowl_min_pressure_matches: 12
+  match_min_pressure_balls: 6   # a "pressure innings/spell" needs at least this many pressure balls
+  active_since: 2025            # e.g. 2025 to rank only players who played in 2025 or later (null = everyone)
+
+value:
+  wicket_value_cap: 8       # max runs a single dismissal can cost/earn (≈ average wicket value);
+                            # chosen because it gave the most repeatable player ratings
+
+score:
+  # CRICQ Score parts (z-scores, combined, then scaled to mean 50, sd 10)
+  w_quality: 0.55          # value added per pressure ball (opponent-adjusted, anchored to overall ability)
+  w_lift: 0.30             # pressure value minus own normal value
+  w_consistency: 0.15      # share of pressure innings/spells with positive value
+  prior_k_grid: [50, 100, 200, 400, 800, 1600, 3200]   # candidate anchor strengths, picked by out-of-sample test
+  bootstrap_reps: 300
+
+full_members:
+  - Afghanistan
+  - Australia
+  - Bangladesh
+  - England
+  - India
+  - Ireland
+  - New Zealand
+  - Pakistan
+  - South Africa
+  - Sri Lanka
+  - West Indies
+  - Zimbabwe
+
+auction:
+  # RR Auction Board settings. Squad facts and player statuses live in data/external/ (edit those CSVs
+  # when official retention/release lists are published on 17 Nov 2026).
+  status_file: data/external/player_status_2027.csv
+  rr_squad_file: data/external/rr_squad_2027.csv
+  reports_file: data/external/retention_reports_2027.csv   # every outlet's retain/release call, weighed into a consensus
+  as_of: "2026-11-15"
+  salary_cap_cr: 130          # reported IPL 2027 purse cap (Cricbuzz, via Time News 12 Nov 2026); change if confirmed otherwise
+  max_squad: 25
+  max_overseas: 8
+  quality_bar: 55             # CRICQ Score treated as "proven under pressure" for squad-strength checks
+  # How many proven players RR wants in each role. A shortfall makes the role a need.
+  needs:
+    # want = how many proven players RR wants in the role. table = which ranking the role uses.
+    # roles / pace_spin / min_share narrow who counts (min_share uses the share of balls bowled in that phase).
+    finisher:        {label: "Finisher (overs 15-20)", want: 2, table: bat, roles: ["Middle / finisher"]}
+    pace_death:      {label: "Death-overs pace bowler", want: 2, table: bowl, pace_spin: Pace, min_share: {death_share: 0.25}}
+    pace_powerplay:  {label: "Powerplay pace bowler", want: 2, table: bowl, pace_spin: Pace, min_share: {pp_share: 0.30}}
+    spin:            {label: "Middle-overs spinner", want: 2, table: bowl, pace_spin: Spin}
+    top_order:       {label: "Opener / top order", want: 3, table: bat, roles: ["Opener", "Top order"]}
+    allrounder_pace: {label: "Pace-bowling all-rounder", want: 1, table: both, pace_spin: Pace}
+  replacement_level: 45       # score assumed for squad players without enough pressure balls to be ranked
+  plan_min_score: 50          # a shortlist pick must be at least an average regular player under pressure
+  plan_min_prob: 0.35         # ...and realistically in the auction pool (see availability_prob)
+  # Availability → probability the player can actually be bought on 16 Dec (used to rank targets)
+  availability_prob:
+    released: 1.0
+    likely_released: 0.75
+    free_agent: 0.6
+    not_in_ipl: 0.5
+    possible_release: 0.45
+    risk: 0.35
+    banned: 0.25
+    under_contract: 0.2
+    opted_out: 0.1
+    likely_retained: 0.03
+    retained: 0.0
+    traded: 0.0
+    retired: 0.0
+    ineligible: 0.0
+    inactive: 0.0

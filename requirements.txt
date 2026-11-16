@@ -1,0 +1,13 @@
+# CRICQ — compatible version ranges. Exact tested versions: requirements-lock.txt
+pandas>=2.2,<4
+numpy>=1.26,<3
+scikit-learn>=1.4,<2
+pyarrow>=15,<30
+pyyaml>=6,<7
+streamlit>=1.40,<2
+plotly>=5.20,<8
+matplotlib>=3.8,<4
+reportlab>=4.0,<6
+pillow>=10,<13
+pypdf>=4,<7
+pytest>=8,<10
