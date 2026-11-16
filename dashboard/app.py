@@ -49,8 +49,8 @@ with st.sidebar:
         'background:rgba(245,184,61,.08);border:1px solid rgba(245,184,61,.28)">'
         '<div style="font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:#9fb0d6">Developer</div>'
         '<div style="font-size:1rem;font-weight:800;color:#F5B83D;line-height:1.2">Sayani Dutta</div>'
-        '<a href="https://github.com/sayani-dutta" target="_blank" '
-        'style="font-size:.78rem;color:#4F8FE6;text-decoration:none">github.com/sayani-dutta</a>'
+        '<a href="https://github.com/sayani2026" target="_blank" '
+        'style="font-size:.78rem;color:#4F8FE6;text-decoration:none">github.com/sayani2026</a>'
         "</div>",
         unsafe_allow_html=True,
     )
